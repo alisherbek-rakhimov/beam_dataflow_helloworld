@@ -28,10 +28,8 @@ echo 'MY NAME IS THOMAS SHELBY' > a.txt
 python3 main.py --input a.txt --output b.txt
 ```
 
-#### For the case you could not get your env ready you can try DirectRunner in Docker container
+#### For the case you could not get your env ready you can try DirectRunner in Docker container and configure .env file under your needs and do not forget to check outputs folder
 
 ```shell
-docker build -t python_apache_beam .
-docker run -it --rm python_apache_beam bash
-python main.py --input a.txt --output b.txt
-```
+docker-compose up --build -d
+``` 

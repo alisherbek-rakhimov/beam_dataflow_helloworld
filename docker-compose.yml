@@ -1,0 +1,11 @@
+version: '3'
+services:
+  beam:
+    build:
+      context: .
+      dockerfile: directrunner/Dockerfile
+    volumes:
+      - ./outputs:/opt/test/outputs
+      - ./inputs:/opt/test/inputs
+
+    entrypoint: 'python ${file} --input inputs/${input} --output outputs/${output}'
