@@ -28,7 +28,11 @@ echo 'MY NAME IS THOMAS SHELBY' > a.txt
 python3 main.py --input a.txt --output b.txt
 ```
 
-#### For the case you could not get your env ready you can try DirectRunner in Docker container and configure .env file under your needs and do not forget to check outputs folder
+#### For the case you could not get your env ready you can try DirectRunner in Docker container
+
+- place your input and output files into `inputs` and `outputs` folder accordingly
+- set input and output filenames in `.env` file
+- run the command shown below, and you are expected to see the output file in `outputs` folder
 
 ```shell
 docker-compose up --build -d
